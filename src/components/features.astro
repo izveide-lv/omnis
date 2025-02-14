@@ -25,9 +25,9 @@ const receivers = [
 
 const givers = [
   {
-    title: "Palielini pārdošanas apjomus",
+    title: "Iegūsti jaunus klientus",
     description:
-      "Uzrunā jaunus klientus, kas iepriekš nezināja par tavu piedāvājumu.",
+      "Uzrunā jaunu auditoriju, kas iepriekš nezināja par tavu piedāvājumu.",
     icon: "bx:cart-add",
   },
   {
@@ -48,7 +48,7 @@ const givers = [
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Kas ir Omnis?
   </h2>
-  <p class="text-lg mt-4 max-w-3xl text-slate-900">
+  <p class="text-lg mt-4 text-slate-900">
     Mūs visus kaitina nelūgtas mēstules un uzbāzīga reklāma, taču neviens arī
     negribētu palaist garām patiešām labus piedāvājumus. <strong>Omnis</strong> ir
     e-pasta mārketings, kas ciena Tavu privātumu un piedāvā jaunu pārdošanas kanālu
@@ -59,12 +59,12 @@ const givers = [
 </div>
 
 <div class="mt-16">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  <h2 class="text-3xl md:text-5xl font-bold lg:tracking-tight">
     Ieguvumi <span class="text-indigo-500">saņēmējiem</span>
   </h2>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-8 gap-4 md:gap-16">
   {
     receivers.map((item) => (
       <div class="flex gap-4 items-start">
@@ -81,12 +81,12 @@ const givers = [
 </div>
 
 <div class="mt-16">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  <h2 class="text-3xl md:text-5xl font-bold lg:tracking-tight">
     Ieguvumi <span class="text-primary-500">sūtītājiem</span>
   </h2>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-8 gap-4 md:gap-16">
   {
     givers.map((item) => (
       <div class="flex gap-4 items-start">
