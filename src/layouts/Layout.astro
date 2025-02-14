@@ -3,9 +3,7 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
-import '@fontsource-variable/bricolage-grotesque';
-
-
+import "@fontsource-variable/bricolage-grotesque";
 
 export interface Props {
   title: string;
@@ -14,44 +12,42 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/opengraph.png",
   Astro.site
 ).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+const makeTitle = title ?? "Omnis";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="lv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-
+    <script defer src="https://stats.izveide.lv/script.js" data-website-id="f844b249-d5b0-4e4d-b1da-5aa1c75a82c4"></script>
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Omnis ir pieklājīgs, neuzbāzīgs un privātumu cienošs e-pasta mārketings."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@labojam",
+        site: "@labojam",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Omnis — saņem labākos piedāvājumus`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Omnis ekrānšāviņš",
         },
       }}
     />
@@ -66,6 +62,41 @@ const makeTitle = title
       img {
         content-visibility: auto;
       }
+      /* .logo {
+        position: relative;
+      }
+      .logo::before {
+        content: "O";
+        position: absolute;
+        top: 0;
+        opacity: 0.5;
+        left: -7px;
+        z-index: -1;
+        padding: 0 3px;
+        transform: rotate(90deg);
+      }
+
+      .logo::after {
+        content: "O";
+        position: absolute;
+        left: 5px;
+        color: #515254;
+        z-index: -1;
+        opacity: 0.5;
+        transform: rotate(90deg);
+      } */
+
+      /* .logo {
+        position: relative;
+      }
+      .logo::after {
+        content: "Omnis";
+        position: absolute;
+        z-index: -1;
+        left: 1px;
+        top: 1px;
+        opacity: 0.123;
+      } */
     </style>
   </body>
 </html>

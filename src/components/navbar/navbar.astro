@@ -5,54 +5,60 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
-  },
+  // {
+  //   title: "Features",
+  //   path: "#",
+  //   children: [
+  //     { title: "Action", path: "/" },
+  //     { title: "Another action", path: "#" },
+  //     { title: "Dropdown Submenu", path: "#" },
+  //     { title: "404 Page", path: "/404" },
+  //   ],
+  // },
+  // {
+  //   title: "Kas ir Omnis?",
+  //   path: "#kas",
+  // },
+  // {
+  //   title: "Ieguvumi saņēmējiem",
+  //   path: "/about",
+  // },
+  // {
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
+  // {
+  //   title: "Contact",
+  //   path: "/contact",
+  // },
+  // {
+  //   title: "Pro Version",
+  //   badge: true,
+  //   path: "https://astroship-pro.web3templates.com/",
+  // },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
-    <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
-        </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
-        </div>
+  <header class="flex flex-col md:flex-row justify-between items-center my-5">
+    <div class="flex w-full md:w-auto items-center justify-around">
+      <a href="/" class="text-6xl "
+        ><span class="font-bold logo text-black">Omnis</span>
+      </a>
+      
+      <!-- <div class="block lg:hidden">
+        <MenuIcon class="w-4 h-4 text-gray-800" />
+      </div> -->
+    </div>
+    <div class="mt-2 md:mt-0 md:ml-auto">
+      <div class="flex items-center gap-4">
+        <!-- <a href="#">Log in</a> -->
+        <Link href="https://form.izveide.lv/omnis-1-WuCzCw" size="md">Pieteikt piedāvājumu</Link>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+    </div>
+    <!-- <Astronav> -->
+      
+      <!-- <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
@@ -83,17 +89,12 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
+        <div class=" flex items-center mt-3 gap-4">
           <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link href="#" size="md" block>Pieteikt piedāvājumu</Link>
         </div>
-      </MenuItems>
-    </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div>
+      </MenuItems> -->
+    <!-- </Astronav> -->
+    
   </header>
 </Container>

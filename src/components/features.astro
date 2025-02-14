@@ -2,66 +2,111 @@
 // @ts-ignore
 import { Icon } from "astro-icon/components";
 
-const features = [
+const receivers = [
   {
-    title: "Bring Your Own Framework",
+    title: "Kuratoru atlasīti piedāvājumi",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Saņem tikai labākos piedāvājumus no veikaliem un pakalpojumu sniedzējiem. Iepazīsti jaunus produktus un speciālistus.",
+    icon: "bx:bxs-store",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Nenodod savu privātumu",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Aizmirsti par mēstulēm, jo tava e-pasta adrese būs pieejama tikai mums, nevis visiem piedāvājumu sniedzējiem.",
+    icon: "bx:bxs-discount",
   },
   {
-    title: "On-Demand Components",
+    title: "Atraksties jebkurā laikā",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Ja vairs nevēlēsies saņemt piedāvājumus, jebkurā laikā varēsi atrakstīties no vēstuļu saņemšanas ar vienu klikšķi.",
+    icon: "bx:bxs-envelope",
+  },
+  
+];
+
+const givers = [
+  {
+    title: "Palielini pārdošanas apjomus",
+    description:
+      "Uzrunā jaunus klientus, kas iepriekš nezināja par tavu piedāvājumu.",
+    icon: "bx:cart-add",
   },
   {
-    title: "Broad Integration",
+    title: "Atvieglo savu e-pasta mārketingu",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Tev vairs nebūs nepieciešams meklēt savu e-pasta mārketinga risinājumu.",
+    icon: "bx:envelope-open",
   },
   {
-    title: "SEO Enabled",
+    title: "Izdevīgi nosacījumi",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Piedāvājumu izsūtīšana pagaidām ir pilnīgi bez maksas.",
+    icon: "bx:dollar",
   },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
-  },
+  
 ];
 ---
 
-<div class="mt-16 md:mt-0">
+<div class="">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Kas ir Omnis? 
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+  <p class="text-lg mt-4 max-w-3xl text-slate-900">
+    Mūs visus kaitina nelūgtas mēstules un uzbāzīga reklāma, taču neviens arī negribētu palaist garām patiešām labus
+    piedāvājumus. <strong>Omnis</strong> ir e-pasta mārketings, kas ciena Tavu privātumu 
+     un piedāvā jaunu pārdošanas kanālu pakalpojumu sniedzējiem. Mēs esam <strong>reklāmu kurators</strong> un <strong>klientu-pārdevēju savedējs</strong>.
+  </p>
+</div>
+
+
+<div class="mt-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Ieguvumi <span class="text-indigo-500">saņēmējiem</span>
+  </h2>
+  <p class="text-lg mt-4 max-w-3xl text-slate-900">
+    Mūs visus kaitina nelūgtas mēstules, taču neviens negrib palaist garām labus
+    piedāvājumus. <strong>Omnis</strong> ir e-pasta mārketings, kas ciena piedāvājuma
+    saņēmējus.
   </p>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
-    features.map((item) => (
+    receivers.map((item) => (
       <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <p class="text-slate-900 mt-1 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<div class="mt-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Ieguvumi <span class="text-primary-500">sūtītājiem</span>
+  </h2>
+  <p class="text-lg mt-4 max-w-3xl text-slate-900">
+    Mūs visus kaitina nelūgtas mēstules, taču neviens negrib palaist garām labus
+    piedāvājumus. <strong>Omnis</strong> ir e-pasta mārketings, kas ciena piedāvājuma
+    saņēmējus.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    givers.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-900 mt-1 leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))
