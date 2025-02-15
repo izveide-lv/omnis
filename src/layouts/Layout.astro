@@ -28,7 +28,10 @@ const makeTitle = title ?? "Omnis";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <script defer src="https://stats.izveide.lv/script.js" data-website-id="f844b249-d5b0-4e4d-b1da-5aa1c75a82c4"></script>
+    <script
+      defer
+      src="https://stats.izveide.lv/script.js"
+      data-website-id="f844b249-d5b0-4e4d-b1da-5aa1c75a82c4"></script>
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
@@ -53,6 +56,16 @@ const makeTitle = title ?? "Omnis";
     />
   </head>
   <body>
+    <div
+      class="flex items-center justify-center gap-x-6 bg-[#ce8541] px-6 py-2.5 sm:px-3.5">
+      <p class="text-xs md:text-sm leading-6 text-center">
+        <div class="text-white">
+          Reģistrē savu e-pastu līdz <span class="font-semibold"
+            >28. februārim</span
+          > un <span class="font-semibold">laimē 50€</span>!
+        </div>
+      </p>
+    </div>
     <Navbar />
     <slot />
     <Footer />
